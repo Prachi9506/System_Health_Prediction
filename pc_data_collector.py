@@ -39,12 +39,12 @@ while True:
 
     uptime = time.time() - boot_time
 
-    health_score = (cpu + ram + disk) / 3
+    health_score = (cpu + ram) / 2
 
-    if health_score > 70:
-        label = 1   # Unhealthy
+    if cpu > 85 or ram > 85 or health_score > 70:
+        label = 1
     else:
-        label = 0   # Healthy
+        label = 0
 
     row = pd.DataFrame([[
         timestamp, cpu, ram, disk,
@@ -67,4 +67,4 @@ while True:
 
     print(f"Logged: CPU={cpu}% RAM={ram}% Label={label}")
 
-    time.sleep(4)
+    time.sleep(2)

@@ -48,3 +48,7 @@ sns.scatterplot(
 
 plt.title("CPU vs RAM Anomaly Detection")
 plt.show()
+import joblib
+joblib.dump(model, "anomaly_model.pkl")
+joblib.dump(scaler, "scaler.pkl")
+print("Model saved successfully")

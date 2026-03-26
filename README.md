@@ -1,4 +1,4 @@
-#System Health Prediction
+# System Health Prediction
 
 This project is an system health monitoring tool that collects real-time PC performance data, detects anomalies using machine learning, and predicts the Remaining Useful Life (RUL) of the system performance. It features a live Streamlit dashboard for visual monitoring and multiple scripts for data collection, model training, and real-time inference.
 
